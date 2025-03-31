@@ -33,7 +33,7 @@ app.use('/user/bookings',BookingRoutes)
 app.use('/user/timeslotavailabilty',UserAvailabilityTimeSlotRoutes)
 
 
-mongoose.connect(process.env.MONGO_URl, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://mathasampath2022:VgfKAc8Le0rwgsTO@cnnct2.ftoqbnh.mongodb.net/?retryWrites=true&w=majority&appName=CNNCT2')
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.log('Failed to connect to MongoDB', err));
 app.listen(port,()=>{
