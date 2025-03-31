@@ -15,11 +15,15 @@ configDotenv();
 
 app.use(cors(
     {
-        origin: 'http://localhost:3000',
+        origin: 'https://cnnct-frontend-sam.vercel.app/',
         methods: 'GET,POST,PUT,DELETE',
         credentials: true
     }
 ));
+//redirection to sepicified routes
+app.get("/", (req, res) => {
+    res.send("Server is running!");
+});
 //redirection to sepicified routes
 app.use('/user',UserRoutes);
 app.use('/user/events',EventRoutes)
