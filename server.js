@@ -24,6 +24,8 @@ app.use(cors(
 app.get("/", (req, res) => {
     res.send("Server is running!");
 });
+console.log(process.env.MONGO_URI)
+
 //redirection to sepicified routes
 app.use('/user',UserRoutes);
 app.use('/user/events',EventRoutes)
