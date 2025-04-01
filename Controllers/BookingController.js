@@ -12,6 +12,15 @@ exports.bookAnEventForUser = async (req, res) => {
     }
 };
 
+exports.rejectthebooking = async (req, res) => {
+    try {
+        const booking = await BookingServices.rejectBooking(req,res);
+        res.status(200).json(booking);
+    }
+    catch(error){
+        res.status(500).json({message: error.message});
+    }
+};
 exports.getBookingsSpecificToUser = async (req, res) => {
     try {
         const bookings = await BookingServices.getBookingsSpecificToUser(req,res);

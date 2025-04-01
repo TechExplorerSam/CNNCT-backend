@@ -8,6 +8,7 @@ const BookingsSchema = new Schema({
 
        required: [true, 'Booking name is required!']
     },
+   
     Bookingdate: {
         type: Date,
         required: [true, 'Booking date is required!']

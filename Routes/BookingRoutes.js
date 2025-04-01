@@ -13,7 +13,7 @@ router.post('/bookanevent/:id',middlewareAuth,CheckAvailabilityConfilctMiddlewar
 
 router.get('/getbookings/:id',middlewareAuth,BookingController.getBookingsSpecificToUser)
 
-
+router.post('/rejectabooking/:id',middlewareAuth,BookingController.rejectthebooking);
 
 //Here middalwareAuth and CheckAvailabilityConfilctMiddleware are the middlewares which are used to authenticate the user and check the availability of the event respectively.
 
