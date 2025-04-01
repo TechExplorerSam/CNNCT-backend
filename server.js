@@ -15,7 +15,7 @@ configDotenv();
 
 app.use(cors(
     {
-        origin: 'https://cnnct-frontend-sam.vercel.app/',
+        origin: 'https://cnnct-frontend-sigma.vercel.app/',
         methods: 'GET,POST,PUT,DELETE',
         credentials: true
     }
@@ -24,9 +24,6 @@ app.use(cors(
 app.get("/", (req, res) => {
     res.send("Server is running!");
 });
-console.log(process.env.MONGO_URI)
-
-//redirection to sepicified routes
 app.use('/user',UserRoutes);
 app.use('/user/events',EventRoutes)
 app.use('/user/bookings',BookingRoutes)
