@@ -15,7 +15,7 @@ configDotenv();
 
 app.use(cors(
     {
-        origin: 'https://cnnct-frontend-sigma.vercel.app/',
+        origin: 'https://cnnct-frontend-sigma.vercel.app',
         methods: 'GET,POST,PUT,DELETE',
         credentials: true
     }
