@@ -5,7 +5,7 @@ const EventSevices=require('./EventsServices')
 const mongoose=require('mongoose')
 
 
-exports.createUserBooking = async (req, res) => {
+exports.createanUserBooking = async (req, res) => {
     try {
         const { id } = req.params;
 
